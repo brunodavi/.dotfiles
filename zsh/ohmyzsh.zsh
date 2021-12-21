@@ -76,6 +76,7 @@ plugins+=(
     alias-finder
     systemadmin
     magic-enter
+    web-search
     jsontools
     urltools
     term_tab
