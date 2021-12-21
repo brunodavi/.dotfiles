@@ -1,0 +1,16 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/brunodavi/nvim
+[submodule "zsh/framework/ohmyzsh"]
+	path = zsh/framework/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "zsh/plugins/powerlevel10k"]
+	path = zsh/plugins/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k
+[submodule "zsh/custom/powerlevel10k"]
+	path = zsh/custom/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k
