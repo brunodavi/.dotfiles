@@ -29,3 +29,6 @@
 [submodule "zsh/custom/plugins/zsh-autopair"]
 	path = zsh/custom/plugins/zsh-autopair
 	url = https://github.com/hlissner/zsh-autopair
+[submodule "dotbot-apt"]
+	path = dotbot-apt
+	url = https://github.com/bryant1410/dotbot-apt

@@ -8,8 +8,6 @@ alias rf='rm -rf'
 
 alias glow='glow -p'
 
-alias cdb='cd-bookmark'
-
 alias sys='sudo systemctl'
 alias sys_status='sys status'
 alias sys_start='sys start'

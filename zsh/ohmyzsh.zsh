@@ -71,16 +71,30 @@ plugins+=(
 # Plugins
     command-not-found
     colored-man-pages
+    universalarchive
     frontend-search
     alias-finder
+    systemadmin
+    magic-enter
     jsontools
+    urltools
+    term_tab
     bgnotify
     colorize
+    mix-fast
     dircycle
     encode64
+    transfer
     extract
+    thefuck
     dotenv
+    screen
+    node
+    nmap
     jump
+    sudo
+    pip
+    man
 
 # Completions
 

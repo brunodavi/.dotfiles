@@ -1,13 +1,20 @@
 - clean: ['~']
 
-- link:
-    ~/.config/nvim:
-    ~/.zsh:
 
-    ~/.gitconfig: git/gitconfig
-  
+- link:
+    ~/.marks/dot:
+        create: true
+        path: ~/.dotfiles
+
+    ~/.config/nvim:
+        create: true
+
+    ~/.zsh:
     ~/.zshenv: zsh/zshenv.zsh
     ~/.zshrc: zsh/zshrc.zsh
+
+    ~/.gitconfig: git/gitconfig
+
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
