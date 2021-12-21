@@ -62,8 +62,41 @@ HIST_STAMPS="dd/mm/yyyy"
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM="$HOME/.zsh/custom"
 
-plugins=(
+plugins+=(
+
+# Aliases
+    aliases
+    common-aliases
+
+# Plugins
+    command-not-found
+    colored-man-pages
+    frontend-search
+    alias-finder
+    jsontools
+    bgnotify
+    colorize
+    dircycle
+    encode64
+    extract
+    dotenv
+    jump
+
+# Completions
+
+## Git
     git
+    gitfast
+    gitignore
+    git-extras
+
+## Programms
+    gh
+    heroku
+    httpie
+
+## Bild
+    compleat
 )
 
 source "$ZSH/oh-my-zsh.sh"

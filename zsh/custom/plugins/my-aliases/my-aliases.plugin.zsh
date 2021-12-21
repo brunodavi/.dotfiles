@@ -3,7 +3,6 @@
 alias ls='lsd -XFv --group-dirs=first'
 
 alias nv='nvim'
-alias vi='nvim'
 
 alias rf='rm -rf'
 
