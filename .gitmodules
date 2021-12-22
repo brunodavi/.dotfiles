@@ -38,3 +38,6 @@
 [submodule "plugins/apt"]
 	path = plugins/apt
 	url = https://github.com/bryant1410/dotbot-apt
+[submodule "zsh/custom/plugins/zsh-defer"]
+	path = zsh/custom/plugins/zsh-defer
+	url = https://github.com/romkatv/zsh-defer

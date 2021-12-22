@@ -66,6 +66,7 @@ plugins+=(
 
 # Aliases
     aliases
+    alias-finder
     common-aliases
 
 # Plugins

@@ -1,5 +1,7 @@
-# Add your own custom plugins in the custom/plugins directory. Plugins placed
-# here will override ones with the same name in the main plugins directory.
+alias aliases="${EDITOR} $0:A"
+
+alias dotrepo='git submodule add --depth 1'
+
 alias ls='lsd -XFv --group-dirs=first'
 
 alias nv='nvim'
