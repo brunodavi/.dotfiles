@@ -115,5 +115,3 @@ plugins+=(
 ## Bild
     compleat
 )
-
-# source "$ZSH/oh-my-zsh.sh"
