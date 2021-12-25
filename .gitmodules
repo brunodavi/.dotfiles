@@ -5,39 +5,4 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/brunodavi/nvim
-[submodule "zsh/framework/ohmyzsh"]
-	path = zsh/framework/ohmyzsh
-	url = https://github.com/ohmyzsh/ohmyzsh
-[submodule "zsh/plugins/powerlevel10k"]
-	path = zsh/plugins/powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k
-[submodule "zsh/custom/powerlevel10k"]
-	path = zsh/custom/powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k
-[submodule "zsh/custom/plugins/zsh-autosuggestions"]
-	path = zsh/custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "zsh/custom/plugins/zsh-completions"]
-	path = zsh/custom/plugins/zsh-completions
-	url = https://github.com/zsh-users/zsh-completions
-[submodule "zsh/custom/plugins/zsh-syntax-highlighting"]
-	path = zsh/custom/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting
-[submodule "zsh/custom/plugins/cd-bookmark"]
-	path = zsh/custom/plugins/cd-bookmark
-	url = https://github.com/mollifier/cd-bookmark
-[submodule "zsh/custom/plugins/zsh-autopair"]
-	path = zsh/custom/plugins/zsh-autopair
-	url = https://github.com/hlissner/zsh-autopair
-[submodule "dotbot-apt"]
-	path = dotbot-apt
-	url = https://github.com/bryant1410/dotbot-apt
-[submodule "dotbot_plugin_aptget"]
-	path = dotbot_plugin_aptget
-	url = https://github.com/dein0s/dotbot_plugin_aptget.git
-[submodule "plugins/apt"]
-	path = plugins/apt
-	url = https://github.com/bryant1410/dotbot-apt
-[submodule "zsh/custom/plugins/zsh-defer"]
-	path = zsh/custom/plugins/zsh-defer
-	url = https://github.com/romkatv/zsh-defer
+	branch = termux

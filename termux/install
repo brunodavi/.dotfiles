@@ -1,0 +1,17 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+export DOT_TERMUX="$HOME/.termux"
+export DOT="$DOT_TERMUX/dot"
+
+install() {
+  for choice in $@
+  do
+    bash "$DOT/$choice/install"
+  done
+}
+
+main() {
+  install bin pkg git zsh
+}
+
+main

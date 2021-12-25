@@ -15,6 +15,10 @@
 
     ~/.gitconfig: git/gitconfig
 
+    ~/.termux:
+
+    ~/bin:
+
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
