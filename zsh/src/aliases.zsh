@@ -10,7 +10,9 @@ alias rf='rm -rf'
 
 alias glow='glow -p'
 
+
 alias sys='sudo systemctl'
+
 alias sys_status='sys status'
 alias sys_start='sys start'
 alias sys_stop='sys stop'

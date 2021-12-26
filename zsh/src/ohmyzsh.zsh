@@ -62,7 +62,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM="$HOME/.zsh/custom"
 
-plugins+=(
+plugins=(
 
 # Aliases
     aliases
@@ -70,7 +70,6 @@ plugins+=(
     common-aliases
 
 # Plugins
-    history-substring-search
     command-not-found
     colored-man-pages
     universalarchive
@@ -95,9 +94,7 @@ plugins+=(
     node
     nmap
     jump
-    sudo
     pip
-    man
 
 # Completions
 

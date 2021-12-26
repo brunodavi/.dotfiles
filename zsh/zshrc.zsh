@@ -1,27 +1,15 @@
-an="$HOME/.zsh/src/antigen.zsh"
+src="$HOME/.zsh/src"
+an="$src/antigen.zsh"
  
 if [ ! -e ${an} ]; then
   curl -L git.io/antigen-nightly > ${an}
 fi
 
+source "$src/antigen.zsh"
+source "$src/ohmyzsh.zsh"
+source "$src/p10k.zsh"
+
 POWERLEVEL9K_DISABLE_GITSTATUS=true
-source <(cat ~/.zsh/src/*)
 
-
-zshusers=(
-  zsh-completions
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
-
-
-antigen use oh-my-zsh
-
-anplug romkatv zsh-defer
-anplug hlissner zsh-autopair
-
-anplug zsh-users ${zshusers[@]}
-
-antigen theme romkatv/powerlevel10k
-
-antigen apply
+antigen init "$src/antigenrc.zsh"
+source "$src/aliases.zsh"
