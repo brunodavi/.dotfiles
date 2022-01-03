@@ -1,4 +1,4 @@
-- clean: ['~']
+- clean: ['~', '~/.marks']
 
 
 - link:
@@ -14,10 +14,6 @@
     ~/.zshrc: zsh/zshrc.zsh
 
     ~/.gitconfig: git/gitconfig
-
-    ~/.termux:
-
-    ~/bin:
 
 
 - shell:

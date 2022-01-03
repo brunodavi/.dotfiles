@@ -32,11 +32,13 @@ antigen bundles <<EOBUNDLES
     encode64
     transfer
     extract
+    thefuck
     dotenv
     screen
     node
     nmap
     jump
+    sudo
     pip
 
 # Completions
