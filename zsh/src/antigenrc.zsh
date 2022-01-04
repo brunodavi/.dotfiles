@@ -2,6 +2,7 @@ antigen use oh-my-zsh
 
 antigen bundle romkatv/zsh-defer
 antigen bundle hlissner/zsh-autopair
+antigen bundle RobSis/zsh-completion-generator
 
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions

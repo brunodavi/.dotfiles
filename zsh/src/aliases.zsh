@@ -1,4 +1,5 @@
 alias aliases="${EDITOR} $0:A"
+alias antigenrc="${EDITOR} ~/.zsh/src/antigenrc.zsh"
 
 alias dotrepo='git submodule add --depth 1'
 
