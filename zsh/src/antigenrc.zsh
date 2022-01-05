@@ -2,6 +2,7 @@ antigen use oh-my-zsh
 
 antigen bundle romkatv/zsh-defer
 antigen bundle hlissner/zsh-autopair
+antigen bundle mollifier/cd-bookmark
 
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
@@ -18,7 +19,6 @@ antigen bundles <<EOBUNDLES
     colored-man-pages
     universalarchive
     frontend-search
-    alias-finder
     systemadmin
     magic-enter
     web-search
@@ -37,7 +37,6 @@ antigen bundles <<EOBUNDLES
     screen
     node
     nmap
-    jump
     sudo
     pip
 

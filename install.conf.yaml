@@ -2,10 +2,6 @@
 
 
 - link:
-    ~/.marks/dot:
-        create: true
-        path: ~/.dotfiles
-
     ~/.config/nvim:
         create: true
 
