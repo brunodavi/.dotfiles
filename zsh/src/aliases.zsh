@@ -1,4 +1,5 @@
-alias aliases="${EDITOR} $0:A"
+alias aliases="${EDITOR} $0"
+alias antigenrc="${EDITOR} ~/.zsh/src/antigenrc.zsh"
 
 alias dotrepo='git submodule add --depth 1'
 
@@ -9,6 +10,8 @@ alias nv='nvim'
 alias rf='rm -rf'
 
 alias glow='glow -p'
+
+alias cdb='cd-bookmark'
 
 
 alias sys='sudo systemctl'
