@@ -2,8 +2,8 @@ src="$HOME/.zsh/src"
 an="$src/antigen.zsh"
  
 if [ ! -e ${an} ]; then
-  echo "[ Antigen ] Installing..."
-  curl -qL git.io/antigen-nightly > ${an}
+  echo "Installing antigen-nightly..."
+  curl -sL git.io/antigen-nightly > ${an}
   echo
 fi
 
