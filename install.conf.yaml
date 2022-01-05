@@ -1,5 +1,4 @@
-- clean: ['~', '~/.marks']
-
+- clean: ['~']
 
 - link:
     ~/.config/nvim:
@@ -12,6 +11,14 @@
     ~/.gitconfig: git/gitconfig
 
 
+    ~/.termux:
+        if: '[ -z "$USER" ]'
+
+    ~/bin:
+        if: '[ -z "$USER" ]'
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [rm -rf ~/.antigen, Uploading antigen]
+
+  - [rm -rf ~/.dotfiles/zsh/src/antigen.zsh, Removing antigen.zsh]
+  - [rm -rf ~/.antigen, Removing .antigen]
