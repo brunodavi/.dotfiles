@@ -12,4 +12,5 @@ source "$src/p10k.zsh"
 POWERLEVEL9K_DISABLE_GITSTATUS=true
 
 antigen init "$src/antigenrc.zsh"
+source "$src/functions.zsh"
 source "$src/aliases.zsh"

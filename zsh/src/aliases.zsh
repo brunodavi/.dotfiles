@@ -1,5 +1,11 @@
-alias aliases="${EDITOR} $0"
-alias antigenrc="${EDITOR} ~/.zsh/src/antigenrc.zsh"
+src=`dirname ${0}`
+
+alias aliases="${EDITOR} ${0}"
+
+alias funcs="${EDITOR} ${src}/funcs.zsh"
+alias plugins="${EDITOR} ${src}/plugins"
+alias antigenrc="${EDITOR} ${src}/antigenrc.zsh"
+
 
 alias dotrepo='git submodule add --depth 1'
 
