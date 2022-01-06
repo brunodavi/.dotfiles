@@ -1,9 +1,10 @@
 # .dotfiles
 
-Simple dotfiles made from dotbot
+Minha configuração inicial do linux/termux
 
-## Install
+## Instalação
 
-      ./scripts/dependences.sh
+      ./script/sources.sh # source.list
+      ./scripts/dependences.sh # dependências
       ./install
 
