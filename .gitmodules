@@ -4,7 +4,7 @@
 	ignore = dirty
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/brunodavi/nvim
-[submodule ".termux"]
-	path = .termux
+	url = git@github.com/brunodavi/nvim
+[submodule "termux"]
+	path = termux
 	url = git@github.com:brunodavi/.termux.git
