@@ -7,7 +7,7 @@ alias plugins="${EDITOR} ${src}/plugins"
 alias antigenrc="${EDITOR} ${src}/antigenrc.zsh"
 
 
-alias dotrepo='git submodule add --depth 1'
+alias dotrepo='git submodule add'
 
 alias ls='lsd -XFv --group-dirs=first'
 
@@ -33,3 +33,5 @@ alias sql_stop='sys_stop mysql'
 alias mon_status='sys_status mongod'
 alias mon_start='sys_start mongod'
 alias mon_stop='sys_stop mongod'
+
+unalias cp mv rm

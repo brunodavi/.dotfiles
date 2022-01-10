@@ -22,13 +22,8 @@ dircycle
 encode64
 transfer
 extract
-dotenv
 screen
-node
-nmap
-jump
 sudo
-pip
 
 
 # Completions
@@ -41,6 +36,9 @@ git-extras
 
 ## Programms
 gh
+pip
+node
+nmap
 heroku
 httpie
 
