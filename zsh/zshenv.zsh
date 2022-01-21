@@ -6,4 +6,5 @@ else
 fi
 
 export PATH=${PATH}:${HOME}/${bin}
+export NVIM="$HOME/.config/nvim"
 export EDITOR=nvim
