@@ -7,13 +7,15 @@ do terminal tanto no Linux ou Android (termux)
 > mais fácil de se para organizar e tive a maior liberdade
 > para personalizar
 
+![terminal_linux](https://github.com/brunodavi/.dotfiles/raw/screenshots/terminal_linux.png)
+
 ## Inicio Rápido
 
 ```bash
 # Use apenas se tiver no linux
 
 curl -sL \
-  raw.githubusercontent.com/brunodavi/.dotfiles/master/scripts/sources.sh | bash
+  https://github.com/brunodavi/.dotfiles/raw/master/scripts/sources.sh | bash
 
 ```
 
