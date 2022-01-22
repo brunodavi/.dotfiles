@@ -28,10 +28,10 @@ gh auth login
 # Clona esse repositório
 gh repo clone brunodavi/.dotfiles
 
-# Instalar Dependências
+# Instala as Dependências
 ./scripts/dependencies.sh
 
-# Mapear os .dotfiles
+# Mapeia os .dotfiles
 ./install
 
 ```
