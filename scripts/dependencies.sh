@@ -18,7 +18,7 @@ termux=(
   git
   curl
   glow
-  nodejs
+  nodejs-lts
   python3
 )
 
