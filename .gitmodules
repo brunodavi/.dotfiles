@@ -8,3 +8,6 @@
 [submodule "termux"]
 	path = termux
 	url = https://github.com/brunodavi/.termux
+[submodule "bash"]
+	path = bash
+	url = https://github.com/Bash-it/bash-it

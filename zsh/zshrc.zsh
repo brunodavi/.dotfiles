@@ -17,3 +17,6 @@ antigen init "$src/antigenrc.zsh"
 
 source "$src/funcs.zsh"
 source "$src/aliases.zsh"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
