@@ -4,9 +4,21 @@
     ~/.config/nvim:
         create: true
 
+
+    ~/.bash_it: bash
+    ~/.bashrc: bash/bashrc.bash
+    
+    ~/.bash_it/custom/aliases.bash: shell/aliases.sh
+    ~/.bash_it/custom/funcs.bash: shell/funcs.sh
+
+
     ~/.zsh:
     ~/.zshenv: zsh/zshenv.zsh
     ~/.zshrc: zsh/zshrc.zsh
+
+    ~/.zsh/src/aliases.zsh: shell/aliases.sh
+    ~/.zsh/src/funcs.zsh: shell/funcs.sh
+
 
     ~/.gitconfig: git/gitconfig
 

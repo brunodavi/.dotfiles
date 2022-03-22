@@ -1,3 +1,1 @@
-antiadd() {
-  echo "${1}" >> ~/.zsh/src/plugins/external.zsh
-}
+/home/brunodavi/.dotfiles/shell/funcs.sh
