@@ -3,3 +3,9 @@ node_modules
 # Antigen
 antigen.zsh
 *.zwc
+
+# Zsh
+./zsh/src/{aliases,funcs}.zsh
+
+# Bash
+./bash/custom/{aliases,funcs}.zsh
