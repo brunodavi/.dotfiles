@@ -14,7 +14,28 @@ alias nv='nvim'
 alias ec='echo'
 alias rf='rm -rf'
 
-alias ls='lsd -XFv --group-dirs=first'
+
+alias ls='lsd -XF --group-dirs=first'
+alias la='ls -a'
+alias l1='ls -1'
+
+alias ll='la
+  --blocks permission \
+  --blocks size \
+  --blocks date \
+  --blocks name'
+
+alias l='ls \
+  --date relative \
+  --blocks permission \
+  --blocks size \
+  --blocks date \
+  --blocks name'
+
+
+alias lst='ls --tree'
+alias lat='la --tree'
+
 alias cdb='cd-bookmark'
 alias glow='glow -p'
 
@@ -34,4 +55,6 @@ alias mon_start='sys_start mongod'
 alias mon_stop='sys_stop mongod'
 
 
-[ ${ZSH_NAME} ] && unalias cp mv rm
+[ ${ZSH_NAME} ] && unalias cp mv rm 2> /dev/null
+
+return 0
