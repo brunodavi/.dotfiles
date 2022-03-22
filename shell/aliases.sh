@@ -1,25 +1,22 @@
-src="$HOME/.dotfiles/shell"
+shell="${HOME}/.dotfiles/shell"
+
+alias dotrepo='git submodule add'
 
 alias restart="exec ${ZSH_NAME:-bash}"
 
 alias zshrc="${EDITOR} ~/.zshrc"
 alias bashrc="${EDITOR} ~/.bashrc"
 
-alias funcs="${EDITOR} ${src}/funcs.sh"
-alias aliases="${EDITOR} ${src}/aliases.sh"
-
-
-alias dotrepo='git submodule add'
-
-alias ls='lsd -XFv --group-dirs=first'
+alias funcs="${EDITOR} ${shell}/funcs.sh"
+alias aliases="${EDITOR} ${shell}/aliases.sh"
 
 alias nv='nvim'
-
+alias ec='echo'
 alias rf='rm -rf'
 
-alias glow='glow -p'
-
+alias ls='lsd -XFv --group-dirs=first'
 alias cdb='cd-bookmark'
+alias glow='glow -p'
 
 
 alias sys='sudo systemctl'
