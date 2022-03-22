@@ -5,7 +5,5 @@ antigen.zsh
 *.zwc
 
 # Zsh
-./zsh/src/{aliases,funcs}.zsh
-
-# Bash
-./bash/custom/{aliases,funcs}.zsh
+zsh/src/aliases.zsh
+zsh/src/funcs.zsh
