@@ -28,12 +28,22 @@ ternary() {
 
 
 copy() {
-  args=${@:-`cat`}
+  args="${@:-`cat`}"
 
   echo "${args}" | clipcopy 2> /dev/null \
-      || termux-clipboard-set ${args}
+      || termux-clipboard-set "${args}"
 }
 
 paste() {
   clippaste
+}
+
+
+open() {
+  if [ -z "${USER}" ]
+  then
+    xdg-open "$@"
+  else
+    termux-open "$@"
+  fi
 }
