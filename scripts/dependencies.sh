@@ -13,6 +13,7 @@ linux=(
 
 termux=(
   gh
+  lsd
   man
   zsh
   git

@@ -1,1 +1,0 @@
-/home/brunodavi/.dotfiles/shell/funcs.sh

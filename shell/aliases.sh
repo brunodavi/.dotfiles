@@ -1,25 +1,43 @@
-src="$HOME/.dotfiles/shell"
+shell="${HOME}/.dotfiles/shell"
+
+alias dotrepo='git submodule add'
 
 alias restart="exec ${ZSH_NAME:-bash}"
 
 alias zshrc="${EDITOR} ~/.zshrc"
 alias bashrc="${EDITOR} ~/.bashrc"
 
-alias funcs="${EDITOR} ${src}/funcs.sh"
-alias aliases="${EDITOR} ${src}/aliases.sh"
-
-
-alias dotrepo='git submodule add'
-
-alias ls='lsd -XFv --group-dirs=first'
+alias funcs="${EDITOR} ${shell}/funcs.sh"
+alias aliases="${EDITOR} ${shell}/aliases.sh"
 
 alias nv='nvim'
-
+alias ec='echo'
 alias rf='rm -rf'
 
-alias glow='glow -p'
+
+alias ls='lsd -XF --group-dirs=first'
+alias la='ls -a'
+alias l1='ls -1'
+
+alias ll='la
+  --blocks permission \
+  --blocks size \
+  --blocks date \
+  --blocks name'
+
+alias l='ls \
+  --date relative \
+  --blocks permission \
+  --blocks size \
+  --blocks date \
+  --blocks name'
+
+
+alias lst='ls --tree'
+alias lat='la --tree'
 
 alias cdb='cd-bookmark'
+alias glow='glow -p'
 
 
 alias sys='sudo systemctl'
@@ -37,4 +55,6 @@ alias mon_start='sys_start mongod'
 alias mon_stop='sys_stop mongod'
 
 
-[ ${ZSH_NAME} ] && unalias cp mv rm
+[ ${ZSH_NAME} ] && unalias cp mv rm 2> /dev/null
+
+return 0

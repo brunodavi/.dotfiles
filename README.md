@@ -20,6 +20,9 @@ curl -sL \
 ```
 
 ```bash
+# Clona o projeto na home
+git clone https://github.com/brunodavi/.dotfiles ~/ 
+
 # Instala o Github Cli
 apt update
 apt install gh
