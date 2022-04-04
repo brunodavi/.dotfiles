@@ -35,7 +35,6 @@ gitignore
 git-extras
 
 ## Programms
-gh
 pip
 node
 nmap
