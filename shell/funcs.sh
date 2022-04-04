@@ -38,12 +38,22 @@ paste() {
   clippaste
 }
 
+filetype() {
+  file --mime-type -b "${1}"
+}
 
 open() {
-  if [ -z "${USER}" ]
-  then
-    xdg-open "$@"
-  else
-    termux-open "$@"
-  fi
+  args=(${@:-`cat`})
+  file_source="`realpath ${args[1]}`"
+  mime_type=`filetype "${file_source}"`
+
+  xdg-open --content-type="${mime_type}" ${file_source}
+}
+
+open_folder() {
+  args=(${@:-`cat`})
+
+  am start \
+    -t 'resource/folder' \
+    -d `realpath ${args[1]}`
 }
