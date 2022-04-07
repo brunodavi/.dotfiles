@@ -57,3 +57,7 @@ open_folder() {
     -t 'resource/folder' \
     -d `realpath ${args[1]}`
 }
+
+line() {
+  sed "${1}!d" "${2}"
+}
