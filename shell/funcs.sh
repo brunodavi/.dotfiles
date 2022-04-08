@@ -61,3 +61,7 @@ open_folder() {
 line() {
   sed "${1}!d" "${2}"
 }
+
+sedn() {
+  sed ':a;N;$!h;'$@
+}
