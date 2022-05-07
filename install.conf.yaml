@@ -5,6 +5,8 @@
         create: true
 
 
+    ~/bin:
+
     ~/.bash_it: bash
     ~/.bashrc: shell/bashrc.sh
     
@@ -20,13 +22,15 @@
     ~/.zsh/src/funcs.zsh: shell/funcs.sh
 
 
-    ~/.gitconfig: git/gitconfig
+    ~/.gitconfig:
+        if: '[ ! -z "$USER" ]'
+        path: git/gitconfig
 
+    ~/.gitconfig:
+        if: '[ -z "$USER" ]'
+        path: git/gitconfig_termux
 
     ~/.termux:
-        if: '[ -z "$USER" ]'
-
-    ~/bin:
         if: '[ -z "$USER" ]'
 
 - shell:

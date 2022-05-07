@@ -1,5 +1,5 @@
 [user]
-	email = 48166556+brunodavi@users.noreply.github.com
-	name = Bruno Davi
+	email = 473829+termux@users.noreply.github.com
+	name = Termux
 [core]
 	editor = nvim --server ~/.config/nvim/.socket --remote-send ':e $@' || nvim
