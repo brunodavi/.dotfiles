@@ -6,7 +6,7 @@
 
 
     ~/.bash_it: bash
-    ~/.bashrc: bash/bashrc.bash
+    ~/.bashrc: shell/bashrc.sh
     
     ~/.bash_it/custom/aliases.bash: shell/aliases.sh
     ~/.bash_it/custom/funcs.bash: shell/funcs.sh
