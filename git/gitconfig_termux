@@ -2,4 +2,4 @@
 	email = 473829+termux@users.noreply.github.com
 	name = Termux
 [core]
-	editor = nvim --server ~/.config/nvim/.socket --remote-send ':e $@' || nvim
+	editor = nvim --server ~/.config/nvim/.socket --remote 
