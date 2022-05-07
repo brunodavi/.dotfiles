@@ -12,6 +12,7 @@ linux=(
 )
 
 termux=(
+  fd
   gh
   lsd
   man
@@ -19,8 +20,8 @@ termux=(
   git
   curl
   glow
-  nodejs-lts
   python3
+  nodejs-lts
 )
 
 check_command() {
