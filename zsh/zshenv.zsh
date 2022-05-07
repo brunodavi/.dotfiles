@@ -11,4 +11,3 @@ export PATH=${PATH}:${HOME}/${bin}
 export EDITOR=nvim
 
 export NVM_DIR="${HOME}/.nvm"
-. "$HOME/.cargo/env"
