@@ -10,8 +10,7 @@ alias bashrc="${EDITOR} ~/.bashrc"
 alias funcs="${EDITOR} ${shell}/funcs.sh"
 alias aliases="${EDITOR} ${shell}/aliases.sh"
 
-alias nvl="nvim --listen ~/.config/nvim/.socket"
-alias nvr="nvim --server ~/.config/nvim/.socket --remote-send"
+alias nvl="nvim --listen ${SOCKET}"
 
 alias nv="nvim"
 alias ec='echo'

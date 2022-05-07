@@ -5,6 +5,7 @@ else
   bin=".local/bin"
 fi
 
+SOCKET="${HOME}/.config/nvim/.socket"
 fpath+=~/.zsh/src/completions
 
 export PATH=${PATH}:${HOME}/${bin}
