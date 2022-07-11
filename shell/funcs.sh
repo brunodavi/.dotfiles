@@ -65,3 +65,13 @@ line() {
 sedn() {
   sed ':a;N;$!h;'$@
 }
+
+cp_ag() {
+  for old_file in `ag -l '^' -G "$1"`
+  do
+    new_file=`echo ${old_file} | sed "s|$2|$3|g"`
+    cp ${old_file} ${new_file}
+
+    sed -i "s|$2|$3|g" ${new_file}
+  done
+}
