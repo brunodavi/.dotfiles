@@ -65,3 +65,19 @@ line() {
 sedn() {
   sed ':a;N;$!h;'$@
 }
+
+
+on_finish() {
+  process="${@}"
+  process_formatted="` \
+    grep -Eom 1 '.{1,25}' <<< "${process}"`..."
+
+  run_toast() {
+    n=$'\n\n'
+    termux-toast "${1}${n}${process_formatted}"
+  }
+
+  bash <<< "${process}" \
+    && run_toast 'Success:' \
+    || run_toast 'Error:'
+}

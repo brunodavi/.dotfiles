@@ -22,16 +22,11 @@
     ~/.zsh/src/funcs.zsh: shell/funcs.sh
 
 
-    ~/.gitconfig:
-        if: '[ ! -z "$USER" ]'
-        path: git/gitconfig
-
-    ~/.gitconfig:
-        if: '[ -z "$USER" ]'
-        path: git/gitconfig_termux
-
     ~/.termux:
         if: '[ -z "$USER" ]'
+
+
+    ~/.gitconfig: git/gitconfig
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

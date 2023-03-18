@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 install_source() {
   sudo curl -fsSLo "${key}" "${url}/${gpg}"
   echo "deb [arch=${architecture} signed-by=${key}] ${url} stable main" | sudo tee "${src}" > /dev/null

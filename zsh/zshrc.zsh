@@ -11,8 +11,6 @@ source "$src/antigen.zsh"
 source "$src/ohmyzsh.zsh"
 source "$src/p10k.zsh"
 
-POWERLEVEL9K_DISABLE_GITSTATUS=true
-
 antigen init "$src/antigenrc.zsh"
 
 source "$src/funcs.zsh"
