@@ -66,7 +66,6 @@ sedn() {
   sed ':a;N;$!h;'$@
 }
 
-
 on_finish() {
   process="${@}"
   process_formatted="` \
