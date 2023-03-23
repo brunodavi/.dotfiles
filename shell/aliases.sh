@@ -58,11 +58,6 @@ alias mon_status='sys_status mongod'
 alias mon_start='sys_start mongod'
 alias mon_stop='sys_stop mongod'
 
-alias pdm='python3 -m pdm'
-
-alias ipy='python3 -m IPython'
-alias ipython='ipy'
-
 [ ${ZSH_NAME} ] && unalias cp mv rm 2> /dev/null
 
 return 0

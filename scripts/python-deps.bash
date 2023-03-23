@@ -1,1 +1,1 @@
-pip install pdb ipython
+pip install pdm ipython
