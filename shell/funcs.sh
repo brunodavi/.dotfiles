@@ -55,7 +55,7 @@ open_folder() {
 
   am start \
     -t 'resource/folder' \
-    -d `realpath ${args[1]}`
+    -d "$(realpath ${args[1]})"
 }
 
 line() {
