@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Dependência
 python3 -m pip install neovim
 

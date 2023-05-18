@@ -1,1 +1,3 @@
-pip install pdm ipython
+#!/usr/bin/env bash
+
+pip install pdm ipython ipdb
