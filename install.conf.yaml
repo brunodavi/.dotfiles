@@ -18,12 +18,13 @@
     ~/bin:
 
     ~/.bash_it: bash
-    ~/.bashrc:
-      path: shell/bashrc.sh
-      force: true
     
     ~/.bash_it/custom/aliases.bash: shell/aliases.sh
     ~/.bash_it/custom/funcs.bash: shell/funcs.sh
+
+    ~/.bashrc:
+      path: shell/bashrc.sh
+      force: true
 
 
     ~/.zsh:
@@ -44,3 +45,8 @@
 
 
     ~/.gitconfig: git/gitconfig
+
+
+    ~/.fonts/f:
+      path: fonts
+      create: true
