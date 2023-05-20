@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ${HOME}/.dotfiles/shell/env.sh
+
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;
