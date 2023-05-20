@@ -15,6 +15,7 @@
     ~/.local/bin:
         create: true
 
+
     ~/bin:
 
     ~/.bash_it: bash
@@ -40,13 +41,20 @@
       force: true
 
 
-    ~/.termux:
-        if: '[ -z "$USER" ]'
-
-
     ~/.gitconfig: git/gitconfig
 
 
+    ~/.termux:
+      if: '[ -z "$USER" ]'
+
+
+    ~/.nvm:
+      if: '! [ -z "$USER" ]'
+
+    ~/.bash_it/custom/nvm.completions.bash:
+      path: nvm/bash_completion
+
     ~/.fonts/f:
+      if: '! [ -z "$USER" ]'
       path: fonts
       create: true
