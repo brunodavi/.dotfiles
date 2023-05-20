@@ -4,15 +4,12 @@ alias dotrepo='git submodule add'
 
 alias restart="exec ${ZSH_NAME:-bash}"
 
+alias envrc="${EDITOR} ~/.dotfiles/shell/env.sh"
 alias zshrc="${EDITOR} ~/.zshrc"
 alias bashrc="${EDITOR} ~/.bashrc"
 
 alias funcs="${EDITOR} ${shell}/funcs.sh"
 alias aliases="${EDITOR} ${shell}/aliases.sh"
-
-alias nvl="nvim --listen ${SOCKET}"
-
-alias nvi="nvim +PlugInstall"
 
 alias nv="nvim"
 alias ec='echo'
