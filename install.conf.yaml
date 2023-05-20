@@ -3,10 +3,12 @@
       force: true
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-
   - [rm -rf ~/.dotfiles/zsh/src/antigen.zsh, Removing antigen.zsh]
   - [rm -rf ~/.antigen, Removing .antigen]
+  - [~/.dotfiles/bash/install.sh]
+
+  - [git submodule update --init --recursive, Installing submodules]
+
 
 - link:
     ~/.config/nvim:
