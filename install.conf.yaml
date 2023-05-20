@@ -1,7 +1,7 @@
 - clean: ['~'] 
 
 - shell:
-  - - rm -rf {~/.dotfiles/zsh/src/antigen.zsh,.antigen}
+  - - rm -rf ~/{.dotfiles/zsh/src/antigen.zsh,.antigen/}
     - Removing Antigen
 
   - - git submodule update --init --recursive
