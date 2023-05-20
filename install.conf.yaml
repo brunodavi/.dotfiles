@@ -1,35 +1,42 @@
-- clean:
-    ~/:
-      force: true
+- clean: ['~'] 
 
 - shell:
-  - [rm -rf ~/.dotfiles/zsh/src/antigen.zsh, Removing antigen.zsh]
-  - [rm -rf ~/.antigen, Removing .antigen]
-  - [~/.dotfiles/bash/install.sh]
+  - - rm -rf {~/.dotfiles/zsh/src/antigen.zsh,.antigen}
+    - Removing Antigen
 
-  - [git submodule update --init --recursive, Installing submodules]
+  - - git submodule update --init --recursive
+    - Installing submodules
 
 
 - link:
     ~/.config/nvim:
         create: true
 
+    ~/.local/bin:
+        create: true
 
     ~/bin:
 
     ~/.bash_it: bash
-    ~/.bashrc: shell/bashrc.sh
+    ~/.bashrc:
+      path: shell/bashrc.sh
+      force: true
     
     ~/.bash_it/custom/aliases.bash: shell/aliases.sh
     ~/.bash_it/custom/funcs.bash: shell/funcs.sh
 
 
     ~/.zsh:
-    ~/.zshenv: zsh/zshenv.zsh
-    ~/.zshrc: zsh/zshrc.zsh
-
     ~/.zsh/src/aliases.zsh: shell/aliases.sh
     ~/.zsh/src/funcs.zsh: shell/funcs.sh
+
+    ~/.zshenv:
+      path: zsh/zshenv.zsh
+      force: true
+
+    ~/.zshrc:
+      path: zsh/zshrc.zsh
+      force: true
 
 
     ~/.termux:
