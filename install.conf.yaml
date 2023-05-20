@@ -1,5 +1,11 @@
 - clean: ['~']
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+  - [rm -rf ~/.dotfiles/zsh/src/antigen.zsh, Removing antigen.zsh]
+  - [rm -rf ~/.antigen, Removing .antigen]
+
 - link:
     ~/.config/nvim:
         create: true
@@ -27,9 +33,3 @@
 
 
     ~/.gitconfig: git/gitconfig
-
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
-
-  - [rm -rf ~/.dotfiles/zsh/src/antigen.zsh, Removing antigen.zsh]
-  - [rm -rf ~/.antigen, Removing .antigen]
