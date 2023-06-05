@@ -7,5 +7,3 @@
 [user]
 	email = 48166556+brunodavi@users.noreply.github.com
 	name = Bruno Davi
-[core]
-	editor = nvim --server ~/.config/nvim/.socket --remote 
