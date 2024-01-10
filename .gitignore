@@ -7,3 +7,9 @@ antigen.zsh
 # Zsh
 zsh/src/aliases.zsh
 zsh/src/funcs.zsh
+
+bin/
+
+shell/env.sh
+fonts/.uuid
+shell/env.sh

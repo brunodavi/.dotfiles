@@ -85,4 +85,3 @@ export BASH_IT_RELOAD_LEGACY=1
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
 export PATH="$PATH:/opt/mssql-tools/bin"
-export PATH="$PATH:/opt/mssql-tools/bin"

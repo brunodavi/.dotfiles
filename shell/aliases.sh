@@ -61,6 +61,10 @@ alias pager='rich \
   --panel-style grey50 \
 '
 
+alias pty='poetry'
+
+alias bat='batcat'
+
 [ ${ZSH_NAME} ] && unalias cp mv rm 2> /dev/null
 
 return 0

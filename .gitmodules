@@ -14,3 +14,6 @@
 [submodule "nvm"]
 	path = nvm
 	url = https://github.com/nvm-sh/nvm
+[submodule "pyenv"]
+	path = pyenv
+	url = https://github.com/pyenv/pyenv.git
