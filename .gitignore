@@ -9,4 +9,3 @@ zsh/src/aliases.zsh
 zsh/src/funcs.zsh
 
 fonts/.uuid
-shell/env.sh
