@@ -46,7 +46,7 @@ end
 
 local options = {
   completion = {
-    completeopt = "menu,menuone",
+    completeopt = "menuone,noselect",
   },
 
   window = {
@@ -77,13 +77,13 @@ local options = {
     ["<C-e>"] = cmp.mapping.close(),
     ["<CR>"] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Insert,
-      select = true,
+      select = false,
     },
     ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
+      if require("luasnip").jumpable(1) then
+        require("luasnip").jump(1)
+      elseif cmp.visible() then
         cmp.select_next_item()
-      elseif require("luasnip").expand_or_jumpable() then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-expand-or-jump", true, true, true), "")
       else
         fallback()
       end
@@ -92,10 +92,30 @@ local options = {
       "s",
     }),
     ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if require("luasnip").jumpable(-1) then
+        require("luasnip").jump(-1)
+      elseif cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end, {
+      "i",
+      "s",
+    }),
+    ["<Up>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif require("luasnip").jumpable(-1) then
-        vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-jump-prev", true, true, true), "")
+      else
+        fallback()
+      end
+    end, {
+      "i",
+      "s",
+    }),
+    ["<Down>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
       else
         fallback()
       end

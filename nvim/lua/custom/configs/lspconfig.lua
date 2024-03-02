@@ -10,7 +10,8 @@ local servers = {
   "tsserver",
   "clangd",
   "jedi_language_server",
-  "ruff_lsp",
+  "tailwindcss",
+  "emmet_ls"
 }
 
 for _, lsp in ipairs(servers) do

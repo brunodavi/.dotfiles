@@ -1,0 +1,18 @@
+snippet /constfile
+  import styles from './${TM_FILENAME_BASE}.module.css'
+  
+  const ${1:`substitute(expand('%:t:r'), '\(_\|^\)\(.\)', '\u\2', 'g')`} = () => {
+    return (
+      <div className={styles.container}>
+        ${1:`substitute(expand('%:t:r'), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+      </div>
+    )
+  }
+
+  export default ${1:`substitute(expand('%:t:r'), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+
+snippet /styles
+  <${1:div} className={styles.$2}>$0</${1:div}>
+
+snippet /styles
+  <${1:div} className={styles.$2} />

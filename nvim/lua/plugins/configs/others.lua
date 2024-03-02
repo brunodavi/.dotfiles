@@ -47,6 +47,8 @@ M.luasnip = function(opts)
       end
     end,
   })
+
+  require("custom.utils")
 end
 
 M.gitsigns = {
