@@ -12,12 +12,6 @@
     ~/.config/nvim:
         create: true
 
-    ~/.local/bin:
-        create: true
-
-
-    ~/bin:
-
     ~/.bash_it: bash
     
     ~/.bash_it/custom/aliases.bash: shell/aliases.sh
