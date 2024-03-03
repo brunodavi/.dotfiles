@@ -32,7 +32,8 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
-    "deno",
+    "tailwindcss-language-server",
+    "emmet-ls",
     "prettier",
 
     -- c/cpp stuff
@@ -40,8 +41,6 @@ M.mason = {
     "clang-format",
 
     -- python stuff
-    "ruff",
-    "ruff-lsp",
     "jedi-language-server",
   },
 }

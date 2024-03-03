@@ -11,7 +11,7 @@ local servers = {
   "clangd",
   "jedi_language_server",
   "tailwindcss",
-  "emmet_ls"
+  "emmet_ls",
 }
 
 for _, lsp in ipairs(servers) do
