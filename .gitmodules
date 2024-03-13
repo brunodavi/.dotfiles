@@ -2,12 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "nvim"]
-	path = nvim
-	url = https://github.com/brunodavi/nvim
-[submodule "termux"]
-	path = termux
-	url = https://github.com/brunodavi/.termux
 [submodule "bash"]
 	path = bash
 	url = https://github.com/Bash-it/bash-it
