@@ -5,11 +5,20 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "yoru",
-  theme_toggle = { "yoru", "one_light" },
+  theme = "onedark",
+  theme_toggle = { "onedark", "one_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
+
+  changed_themes = {
+    all = {
+      base_16 = {
+        base01 = "#555555",
+        base03 = "#404040",
+      }
+    }
+  }
 }
 
 M.plugins = "custom.plugins"

@@ -13,7 +13,7 @@ source "$src/p10k.zsh"
 
 antigen init "$src/antigenrc.zsh"
 
-source "$src/funcs.zsh"
 source "$src/aliases.zsh"
+source "$src/funcs.zsh"
 
 return 0

@@ -26,6 +26,16 @@ ternary() {
   esac
 }
 
+b64() {
+  args="${@:-`cat`}"
+  echo "${args}" | base64
+}
+
+d64() {
+  args="${@:-`cat`}"
+  echo "${args}" | base64 -d
+}
+
 
 copy() {
   args="${@:-`cat`}"
