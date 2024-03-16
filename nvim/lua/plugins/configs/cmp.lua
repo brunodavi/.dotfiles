@@ -46,6 +46,7 @@ end
 
 local options = {
   completion = {
+    autocomplete = false,
     completeopt = "menuone,noselect",
   },
 
@@ -53,7 +54,7 @@ local options = {
     completion = {
       side_padding = (cmp_style ~= "atom" and cmp_style ~= "atom_colored") and 1 or 0,
       winhighlight = "Normal:CmpPmenu,CursorLine:CmpSel,Search:None",
-      scrollbar = false,
+      scrollbar = true,
     },
     documentation = {
       border = border "CmpDocBorder",
@@ -80,10 +81,10 @@ local options = {
       select = false,
     },
     ["<Tab>"] = cmp.mapping(function(fallback)
-      if require("luasnip").jumpable(1) then
-        require("luasnip").jump(1)
-      elseif cmp.visible() then
+      if cmp.visible() then
         cmp.select_next_item()
+      elseif require("luasnip").jumpable(1) then
+        require("luasnip").jump(1)
       else
         fallback()
       end
