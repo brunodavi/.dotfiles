@@ -2,7 +2,6 @@ local M = {}
 
 M.treesitter = {
   ensure_installed = {
-    "vim",
     "lua",
     "html",
     "css",
@@ -10,6 +9,7 @@ M.treesitter = {
     "typescript",
     "tsx",
     "c",
+    "smali",
     "python",
     "markdown",
     "markdown_inline",
@@ -29,6 +29,7 @@ M.mason = {
     "stylua",
 
     -- web dev stuff
+    "deno",
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
@@ -47,11 +48,9 @@ M.mason = {
 
 -- git support in nvimtree
 M.nvimtree = {
-  filters = {
-    dotfile = true
-  },
   git = {
     enable = true,
+    ignore = true,
   },
 
   renderer = {

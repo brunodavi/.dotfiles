@@ -1,5 +1,6 @@
 local M = {}
 local utils = require "core.utils"
+local cu = require "custom.utils"
 
 M.blankline = {
   indentLine_enabled = 1,
@@ -25,6 +26,21 @@ M.blankline = {
 M.luasnip = function(opts)
   require("luasnip").config.set_config(opts)
 
+  require("luasnip").env_namespace(
+    "FILE",
+    {
+      vars = {
+        TITLE = function()
+          return cu.to_title()
+        end,
+
+        PASCAL = function()
+          return cu.to_pascal()
+        end,
+      }
+    }
+  )
+
   -- vscode format
   require("luasnip.loaders.from_vscode").lazy_load()
   require("luasnip.loaders.from_vscode").lazy_load { paths = vim.g.vscode_snippets_path or "" }
@@ -47,8 +63,6 @@ M.luasnip = function(opts)
       end
     end,
   })
-
-  require("custom.utils")
 end
 
 M.gitsigns = {

@@ -13,22 +13,22 @@ g.snipmate_snippets_path = "~/.config/nvim/lua/custom/snippets"
 -- Command
 local new_cmd = vim.api.nvim_create_user_command
 
-
 new_cmd(
-  "ListModule",
+  "InspectModule",
 
   function(opts)
     local module_path = opts.args
-    local module_var = require(module_path)
-
-    print(vim.inspect(module_var))
+    utils.inspect_module(module_path)
   end,
 
   { nargs = 1 }
 )
 
+-- Functions
 utils.test_function(
   function()
-    print('testing, lua')
+    print('test')
   end
 )
+
+_G.inspect = utils.inspect
