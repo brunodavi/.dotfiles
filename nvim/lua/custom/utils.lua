@@ -5,6 +5,7 @@ M.print_n = function(...)
     print(table.concat(args, '\n'))
 end
 
+
 M.test_function = function(func)
   vim.api.nvim_create_user_command(
     "TestCommand",
@@ -17,13 +18,14 @@ M.test_function = function(func)
   )
 end
 
-M.count = 0
+
+local count = 0
 
 function M.inspect(items)
-  M.count = M.count + 1
+  count = count + 1
 
   local config_path = vim.fn.stdpath "config"
-  local filename = string.format('%s/.__inspect__%d.lua', config_path, M.count)
+  local filename = string.format('%s/.__inspect__%d.lua', config_path, count)
 
   local inspect = 'return ' .. vim.inspect(items)
   inspect = inspect:gsub("<(%S+) %d+>", "'%1'")
@@ -46,6 +48,7 @@ function M.inspect_module(module_path)
   local module = require(module_path)
   M.inspect(module)
 end
+
 
 ---@param no_ext boolean?
 ---@return string

@@ -38,6 +38,14 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
+  -- lua with packer.nvim
+  {
+    "max397574/better-escape.nvim",
+    config = function()
+      require("better_escape").setup()
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

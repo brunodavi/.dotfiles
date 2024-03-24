@@ -27,7 +27,8 @@ new_cmd(
 -- Functions
 utils.test_function(
   function()
-    print('test')
+    require("core.utils").load_mappings()
+    require("core.utils").load_config()
   end
 )
 
