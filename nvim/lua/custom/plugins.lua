@@ -12,14 +12,15 @@ local plugins = {
       {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
-          require "custom.configs.null-ls"
+          require "custom.configs.lsp.null-ls"
         end,
+        requires = { "nvim-lua/plenary.nvim" },
       },
     },
     config = function()
       require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
-    end, -- Override to setup mason-lspconfig
+      require "custom.configs.lsp"
+    end,
   },
 
   -- override plugin configs
@@ -38,27 +39,25 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
-  -- lua with packer.nvim
   {
-    "max397574/better-escape.nvim",
-    config = function()
-      require("better_escape").setup()
-    end,
-  },
+		"hrsh7th/nvim-cmp",
+		opts = overrides.cmp,
+	},
 
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
+  {
+		"nvim-telescope/telescope.nvim",
+		opts = overrides.telescope,
+	},
 
-  -- All NvChad plugins are lazy-loaded by default
-  -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
-  -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
   {
     "mg979/vim-visual-multi",
     lazy = false
   },
+
+  -- My Plugins
+	{
+		"vimwiki/vimwiki",
+	},
 
   {
     "ggandor/leap.nvim",
@@ -66,6 +65,35 @@ local plugins = {
       require('leap').add_default_mappings()
     end
   },
+
+	{
+		"mfussenegger/nvim-dap",
+		config = function()
+			require("custom.configs.dap")
+		end,
+
+    dependencies = {
+      -- Required dependency for nvim-dap-ui
+      'nvim-neotest/nvim-nio',
+
+      -- Installs the debug adapters for you
+      'jay-babu/mason-nvim-dap.nvim',
+
+      {
+        "rcarriga/nvim-dap-ui",
+        config = function()
+          require("dapui").setup()
+        end,
+      },
+
+      {
+        "theHamsta/nvim-dap-virtual-text",
+        config = function()
+          require("nvim-dap-virtual-text").setup()
+        end,
+      },
+    }
+	},
 }
 
 return plugins

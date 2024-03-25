@@ -1,5 +1,7 @@
 M = {}
 
+local nvim_path = vim.fn.stdpath "config"
+
 M.print_n = function(...)
     local args = table.pack(...)
     print(table.concat(args, '\n'))
@@ -24,8 +26,7 @@ local count = 0
 function M.inspect(items)
   count = count + 1
 
-  local config_path = vim.fn.stdpath "config"
-  local filename = string.format('%s/.__inspect__%d.lua', config_path, count)
+  local filename = string.format('%s/.__inspect__%d.lua', nvim_path, count)
 
   local inspect = 'return ' .. vim.inspect(items)
   inspect = inspect:gsub("<(%S+) %d+>", "'%1'")
@@ -78,6 +79,16 @@ function M.to_pascal(filename)
   filename = filename or M.get_filename()
 
   return vim.fn.substitute(filename, [[\(_\|^\)\(.\)]], [[\u\2]], 'g')
+end
+
+
+function M.create_snippet()
+  local filename = vim.api.nvim_buf_get_option(0, 'filetype')
+  local snippet_path = nvim_path .. '/lua/custom/snippets/%s.snippets'
+  local snippet_file = string.format(snippet_path, filename)
+
+  vim.cmd('e ' .. snippet_file)
+  vim.cmd('set filetype=snippets')
 end
 
 return M

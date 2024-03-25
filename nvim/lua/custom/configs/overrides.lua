@@ -63,4 +63,44 @@ M.nvimtree = {
   },
 }
 
+M.cmp = {
+	formatting = {
+		format = function(entry, vim_item)
+			local icons = require("nvchad.icons.lspkind")
+			vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
+			vim_item.menu = ({
+				luasnip = "[Luasnip]",
+				nvim_lsp = "[Nvim LSP]",
+				buffer = "[Buffer]",
+				nvim_lua = "[Nvim Lua]",
+				path = "[Path]",
+			})[entry.source.name]
+			return vim_item
+		end,
+	},
+}
+
+M.telescope = {
+	defaults = {
+		vimgrep_arguments = {
+			"rg",
+			"-L",
+			"--color=never",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+			"--smart-case",
+			"--hidden",
+		},
+		mappings = {
+			i = {
+				["<esc>"] = function(...)
+					require("telescope.actions").close(...)
+				end,
+			},
+		},
+	},
+}
+
 return M

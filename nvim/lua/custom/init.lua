@@ -1,3 +1,6 @@
+require("custom.global")
+
+
 local opt = vim.opt
 local g = vim.g
 
@@ -24,12 +27,19 @@ new_cmd(
   { nargs = 1 }
 )
 
+new_cmd(
+  "CreateSnippet",
+
+  function()
+    utils.create_snippet()
+  end,
+
+  {}
+)
+
 -- Functions
 utils.test_function(
   function()
-    require("core.utils").load_mappings()
-    require("core.utils").load_config()
+    print(0)
   end
 )
-
-_G.inspect = utils.inspect
