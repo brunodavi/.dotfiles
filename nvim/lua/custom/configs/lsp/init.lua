@@ -26,7 +26,7 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	}
 
-	local exists, settings = pcall(require, "configs.server-settings." .. lsp)
+	local exists, settings = pcall(require, "custom.configs.lsp.servers." .. lsp)
 	if exists then
 		opts = merge_tb("force", settings, opts)
 	end
