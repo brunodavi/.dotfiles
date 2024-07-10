@@ -52,3 +52,7 @@
       if: '! [ -z "$USER" ]'
       path: fonts
       create: true
+
+    ~/.local/share/nvim/mason/bin/lua-language-server:
+      if: '[ -z "$USER" ]'
+      path: ~/../usr/bin/lua-language-server
