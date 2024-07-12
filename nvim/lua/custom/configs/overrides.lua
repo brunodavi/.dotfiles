@@ -10,6 +10,7 @@ M.treesitter = {
     "tsx",
     "c",
     "smali",
+    "kotlin",
     "python",
     "markdown",
     "markdown_inline",
@@ -39,7 +40,7 @@ M.mason = {
 
     -- c/cpp stuff
     "clangd",
-    "clang-format",
+    -- "clang-format",
 
     -- python stuff
     "jedi-language-server",
