@@ -2,7 +2,6 @@
 aliases
 
 # Plugins
-command-not-found
 magic-enter
 web-search
 term_tab

@@ -85,3 +85,7 @@ export BASH_IT_RELOAD_LEGACY=1
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
 export PATH="$PATH:/opt/mssql-tools/bin"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
