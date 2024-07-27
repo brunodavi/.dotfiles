@@ -1,12 +1,6 @@
-cmd_exists() {
-}
-
 # cmd_exists_then_alias()
 cxta() {
-  if command -v "$1" > /dev/null;
-  then
-    alias "$2"="$3"
-  fi
+  command -v "$1" > /dev/null && alias "$2"="$3"
 }
 
 
@@ -28,7 +22,7 @@ alias ec='echo'
 alias rf='rm -rf'
 
 
-cxta ls ls 'eza \
+cxta eza ls 'eza \
 	-F always \
 	--icons \
 	--group-directories-first \
@@ -59,4 +53,4 @@ alias cdb='cd-bookmark'
 # '
 
 
-# cxta batcat bat 'batcat'
+cxta batcexa bat 'batcat'

@@ -10,6 +10,9 @@
   - - git submodule update --init --recursive
     - Installing submodules...
 
+  - - ./shell/install-deps.sh
+    - Installing dependences...
+
 - link:
     ~/.config/nvim:
         create: true
