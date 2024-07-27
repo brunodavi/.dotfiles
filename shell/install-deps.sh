@@ -5,19 +5,11 @@ if [ -z $USER ]
 then
   pkg update
 
-  pkg install zsh
-
-  pkg install eza
-  pkg install bat
-
-  pkg install neovim
-  pkg install vim
-
-  pkg install gh
+  pkg install zsh eza bat neovim vim gh -y
 else
   apt update
 
-  sudo apt install zsh
-  sudo apt install eza
-  sudo apt install bat
+  sudo apt install zsh -y
+  sudo apt install eza -y
+  sudo apt install bat -y
 fi
