@@ -2,12 +2,3 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "bash"]
-	path = bash
-	url = https://github.com/Bash-it/bash-it
-[submodule "nvm"]
-	path = nvm
-	url = https://github.com/nvm-sh/nvm
-[submodule "pyenv"]
-	path = pyenv
-	url = https://github.com/pyenv/pyenv.git

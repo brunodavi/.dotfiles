@@ -2,20 +2,17 @@
 
 - shell:
   - - rm -rf ~/{.dotfiles/zsh/src/antigen.zsh,.antigen/}
-    - Removing Antigen
+    - Removing Antigen...
+
+  - - rm -rf ~/.termux
+    - Removing .termux...
 
   - - git submodule update --init --recursive
-    - Installing submodules
-
+    - Installing submodules...
 
 - link:
     ~/.config/nvim:
         create: true
-
-    ~/.bash_it: bash
-    
-    ~/.bash_it/custom/aliases.bash: shell/aliases.sh
-    ~/.bash_it/custom/funcs.bash: shell/funcs.sh
 
     ~/.bashrc:
       path: shell/bashrc.sh
@@ -41,12 +38,6 @@
     ~/.termux:
       if: '[ -z "$USER" ]'
 
-
-    ~/.nvm:
-      if: '! [ -z "$USER" ]'
-
-    ~/.bash_it/custom/nvm.completions.bash:
-      path: nvm/bash_completion
 
     ~/.fonts/f:
       if: '! [ -z "$USER" ]'

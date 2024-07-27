@@ -1,3 +1,15 @@
+cmd_exists() {
+}
+
+# cmd_exists_then_alias()
+cxta() {
+  if command -v "$1" > /dev/null;
+  then
+    alias "$2"="$3"
+  fi
+}
+
+
 shell="${HOME}/.dotfiles/shell"
 
 alias dotrepo='git submodule add'
@@ -16,11 +28,11 @@ alias ec='echo'
 alias rf='rm -rf'
 
 
-alias ls='exa \
-  -Fh \
-  --icons \
-  --group-directories-first \
-  --sort Extension'
+cxta ls ls 'eza \
+	-F always \
+	--icons \
+	--group-directories-first \
+	--sort Extension'
 
 alias la='ls -a'
 alias l1='ls -1'
@@ -33,34 +45,18 @@ alias lat='la --tree'
 
 alias cdb='cd-bookmark'
 
+# cxta rich pager 'rich \
+#   --pager \
+#   --guides \
+#   --emoji \
+#   --expand \
+#   --hyperlinks \
+#   --line-numbers \
+#   --panel square \
+#   --theme one-dark \
+#   --caption main.py \
+#   --panel-style grey50 \
+# '
 
-alias sys='sudo systemctl'
 
-alias sys_status='sys status'
-alias sys_start='sys start'
-alias sys_stop='sys stop'
-
-alias sql_status='sys_status mysql'
-alias sql_start='sys_start mysql'
-alias sql_stop='sys_stop mysql'
-
-alias mon_status='sys_status mongod'
-alias mon_start='sys_start mongod'
-alias mon_stop='sys_stop mongod'
-
-alias pager='rich \
-  --pager \
-  --guides \
-  --emoji \
-  --expand \
-  --hyperlinks \
-  --line-numbers \
-  --panel square \
-  --theme one-dark \
-  --caption main.py \
-  --panel-style grey50 \
-'
-
-if command -v batcat > /dev/null; then
-  alias bat='batcat'
-fi
+# cxta batcat bat 'batcat'
