@@ -2,6 +2,18 @@
 
 set -e
 
+exists() {
+  for cmd in $@
+  do
+    ! command -v $cmd > /dev/null && return 1
+  done
+  return 0
+}
+
+if ! exists python zsh eza neovim; then
+  ./shell/install-deps.sh
+fi
+
 CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
