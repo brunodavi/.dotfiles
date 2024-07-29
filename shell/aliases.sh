@@ -54,3 +54,5 @@ alias cdb='cd-bookmark'
 
 
 cxta batcexa bat 'batcat'
+
+alias envrc="${EDITOR} ~/.envrc"
