@@ -10,7 +10,7 @@ exists() {
   return 0
 }
 
-if ! exists python zsh eza neovim; then
+if ! exists python zsh eza nvim; then
   ./shell/install-deps.sh
 fi
 
