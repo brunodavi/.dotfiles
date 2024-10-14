@@ -1,4 +1,4 @@
 romkatv/zsh-defer
 hlissner/zsh-autopair
-mollifier/cd-bookmark
+brunodavi/cd-bookmark
 anantkaul/zsh-completion-autogenerator
