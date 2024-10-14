@@ -57,7 +57,7 @@ open() {
   file_source="`realpath ${args[1]}`"
   mime_type=`filetype "${file_source}"`
 
-  xdg-open --content-type="${mime_type}" ${file_source}
+  xdg-open ${file_source}
 }
 
 open_folder() {

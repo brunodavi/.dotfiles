@@ -34,24 +34,20 @@ alias l1='ls -1'
 alias ll='la -l --no-user'
 alias l='ll --no-time --no-filesize'
 
-alias lst='ls --tree'
-alias lat='la --tree'
-
 alias cdb='cd-bookmark'
 
-# cxta rich pager 'rich \
-#   --pager \
-#   --guides \
-#   --emoji \
-#   --expand \
-#   --hyperlinks \
-#   --line-numbers \
-#   --panel square \
-#   --theme one-dark \
-#   --caption main.py \
-#   --panel-style grey50 \
-# '
-
+cxta rich pager 'rich \
+  --pager \
+  --guides \
+  --emoji \
+  --expand \
+  --hyperlinks \
+  --line-numbers \
+  --panel square \
+  --theme one-dark \
+  --caption main.py \
+  --panel-style grey50 \
+'
 
 cxta batcexa bat 'batcat'
 
