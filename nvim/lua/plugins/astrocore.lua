@@ -30,6 +30,7 @@ return {
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = true, -- sets vim.opt.spell
+        spelllang = "pt_br,en_us",
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
         clipboard = "",

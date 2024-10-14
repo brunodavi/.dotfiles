@@ -7,16 +7,7 @@
 ---@type LazySpec
 return {
 
-  -- == Examples of Adding Plugins ==
-
   "andweeb/presence.nvim",
-
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function() require("lsp_signature").setup() end,
-
-  },
 
   {
     'folke/neodev.nvim',
@@ -87,7 +78,7 @@ return {
   },
 
   -- You can disable default plugins as follows:
-  { "max397574/better-escape.nvim", enabled = false },
+  { "max397574/better-escape.nvim", enabled = true },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
