@@ -1,4 +1,5 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+---@diagnostic disable: missing-fields
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
@@ -9,15 +10,61 @@ return {
   -- == Examples of Adding Plugins ==
 
   "andweeb/presence.nvim",
+
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
+
   },
 
-  -- == Examples of Overriding Plugins ==
+  {
+    'folke/neodev.nvim',
+    config = function()
+      require('neodev').setup()
+    end,
+  },
 
-  -- customize alpha options
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      {
+        "Issafalcon/neotest-dotnet",
+      },
+    },
+
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-dotnet")({
+            dap = {
+              -- Argumentos extras para configuração do nvim-dap
+              -- Para mais informações, veja: https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
+              args = { justMyCode = false },
+              -- Nome do adaptador dap. O valor padrão é 'netcoredbg'
+              adapter_name = "coreclr",
+            },
+            -- Atributos personalizados para descoberta de testes
+            -- Note: Apenas atributos personalizados para testes não parametrizados devem ser incluídos aqui.
+            custom_attributes = {
+              xunit = { "Debug Tests xUnit" },
+              nunit = { "Debug Tests on Nuit" },
+              mstest = { "Debug Tests on MsTest" },
+            },
+            -- Argumentos adicionais para o comando `dotnet test`
+            -- Esses argumentos serão aplicados a TODAS as execuções de teste realizadas via neotest
+            dotnet_additional_args = {
+              "--verbosity detailed",  -- Exibe mais detalhes na saída dos testes
+            },
+            -- Define se o root de descoberta será o projeto ou a solução
+            -- 'project' é o valor padrão, mas 'solution' pode ser mais confiável quando se trabalha com .sln
+            discovery_root = "solution",  -- Usar 'solution' se preferir detectar vários projetos em uma solução
+          }),
+        },
+      })
+    end,
+  },
+
   {
     "goolord/alpha-nvim",
     opts = function(_, opts)
