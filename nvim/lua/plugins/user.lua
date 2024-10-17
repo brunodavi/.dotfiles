@@ -6,16 +6,6 @@
 
 ---@type LazySpec
 return {
-
-  "andweeb/presence.nvim",
-
-  {
-    'folke/neodev.nvim',
-    config = function()
-      require('neodev').setup()
-    end,
-  },
-
   {
     "nvim-neotest/neotest",
     dependencies = {
