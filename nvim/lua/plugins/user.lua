@@ -4,6 +4,13 @@
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
 
+local function get_runsettings()
+  local file_name = ".runsettings"
+  local test_settings = vim.fn.getenv("PWD") .. "/" .. file_name
+  local arg_set_test_settings = "-s " .. test_settings
+  return vim.fn.filereadable(test_settings) == 1 and arg_set_test_settings or ""
+end
+
 ---@type LazySpec
 return {
   {
@@ -35,11 +42,11 @@ return {
             -- Argumentos adicionais para o comando `dotnet test`
             -- Esses argumentos serão aplicados a TODAS as execuções de teste realizadas via neotest
             dotnet_additional_args = {
-              "--verbosity detailed",  -- Exibe mais detalhes na saída dos testes
+              get_runsettings(),  -- Exibe mais detalhes na saída dos testes
             },
             -- Define se o root de descoberta será o projeto ou a solução
             -- 'project' é o valor padrão, mas 'solution' pode ser mais confiável quando se trabalha com .sln
-            discovery_root = "solution",  -- Usar 'solution' se preferir detectar vários projetos em uma solução
+            discovery_root = "project",  -- Usar 'solution' se preferir detectar vários projetos em uma solução
           }),
         },
       })
