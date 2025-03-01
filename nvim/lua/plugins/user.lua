@@ -54,6 +54,14 @@ return {
   },
 
   {
+    "ray-x/lsp_signature.nvim",
+    event = "InsertEnter",
+    opts = {
+      -- cfg options
+    },
+  },
+
+  {
     "goolord/alpha-nvim",
     opts = function(_, opts)
       -- customize the dashboard header
@@ -117,4 +125,7 @@ return {
       )
     end,
   },
+
+  { 'mg979/vim-visual-multi', enabled = true },
+  { 'ggandor/lightspeed.nvim', enabled = true },
 }

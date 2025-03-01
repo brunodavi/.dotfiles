@@ -16,7 +16,7 @@ return {
       autopairs = true, -- enable autopairs at start
       cmp = true, -- enable completion at start
       diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
-      highlighturl = true, -- highlight URLs at start
+      highlighturl = false, -- highlight URLs at start
       notifications = false, -- enable notifications at start
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -55,7 +55,6 @@ return {
         }
       },
 
-      -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
 
@@ -87,7 +86,14 @@ return {
             vim.fn.setreg("+", line)
           end,
           desc = "Copy to clipboard"
-        }
+        },
+
+        ["<Leader>lH"] = {
+          function()
+            require("lsp_signature").toggle_float_win()
+          end,
+          desc = "Show all overflows"
+        },
       },
     },
   },
