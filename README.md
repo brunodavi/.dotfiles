@@ -15,6 +15,9 @@ do terminal tanto no Linux ou Android (termux)
 # Clona o projeto na home
 git clone https://github.com/brunodavi/.dotfiles ~/
 
+# Entra na pasta .dotfiles
+cd ~/.dotfiles
+
 # Mapeia configurações do dotfiles
 ./install
 ```
