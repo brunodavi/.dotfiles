@@ -6,4 +6,4 @@
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	email = 48166556+brunodavi@users.noreply.github.com
-	name = Bruno Davi
+	name = brunodavi
